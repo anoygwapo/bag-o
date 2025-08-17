@@ -14,13 +14,16 @@ public class AirFare {
         if(cl == 1){
             cl = 250;
              tfare = dis * cl;
-            System.out.printf("total fare: %.2f%n", tfare);
+             if(dis >= 1000){
+              tfare = tfare - (tfare * 0.10f);
+             }
         }else if(cl == 2){
              tfare = dis * 500;
             cl = 500;
-             tfare = tfare - (tfare * 0.10f);
-            System.out.printf("total fare: %.2f%n", tfare);
+             if(dis >= 1000){
+              tfare = tfare - (tfare * 0.10f);
+             }
         }
-      
+             System.out.printf("total fare: %.2f%n", tfare);
     }
 }
